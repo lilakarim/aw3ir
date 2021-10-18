@@ -9,25 +9,40 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+        <link rel="stylesheet" href="formulaire.css">
+        <script type="text/javascript" src="formulaire.js"></script>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <h1>Saisie d'une fiche "Personne"</h1>
+        <form >
+            <fieldset>
+              <legend><strong>Personne:</strong></legend>
+              <label for="nom">Nom:</label><br>
+              <input type="text" id="nom" name="nom"  minlength="5" maxlength="20" required ><br>
+              <label for="prenom">Prénom:</label><br>
+              <input type="text" id="prenom" name="prenom" minlength="5" maxlength="20" required><br><br>
+              <label for="datedenaissance">Date de naissance:</label><br>
+              <input type="date" name="dateDeNaissance" id="dateDeNaissance" placeholder="JJ/MM/AAAA" /><br><br>
+              <label for="mail">Adresse email:</label><br>
+              <input type="text" id="mail" name="mail" minlength="5" maxlength="20" required><br><br>
+              <label for="adress">Adresse postale:</label><br>
+              <input type="text" id="adress" name="adress"><br><br>
+
+              <!--bouton de validation-->
+             <input type="button" value="Valider" onclick="validation()">
+
+              <!--class de controle-->
+              <div id="error" class="error"> </div>
+              <div id="result" class="result"> </div>
+               
+            
+            </fieldset>
+           
+          </form>
+           
     </body>
 </html>
