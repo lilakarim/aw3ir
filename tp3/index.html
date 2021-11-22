@@ -10,6 +10,15 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <!-- CSS boostrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <script src="js/form-validation.js"></script>
+    
+
         <style>
           body{
               background-color: #e9ebee;              
@@ -19,15 +28,59 @@
               max-width: 800px;              
           }
         </style>
+       
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
     </head>
     <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <h1 align = "center">formulaire de saisie d'informations</h1>
+        
+        <div class="container">
+            <!-- Content here -->
+
+            <form class="row g-7">   
+                <div class="col-md-6">
+                  <label for="inputNom" class="form-label">Nom</label>
+                  <input type="nom" class="form-control" id="inputNom">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPrenom" class="form-label">Prénom</label>
+                  <input type="prenom" class="form-control" id="inputPrenom">
+                </div>
+                <div class="col-12">
+                  <label for="inputDate" class="form-label">Date de naissance</label>
+                  <input type="date" class="form-control" id="inputDate" placeholder="JJ/MM/AAAA">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Addresse postale</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="N° Rue Ville Code postale">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail">
+                  </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+          </div>
+
+          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Bienvenue </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
     </body>
 </html>
